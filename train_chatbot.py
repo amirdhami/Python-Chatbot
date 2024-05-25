@@ -9,3 +9,5 @@ from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 import json
 import pickle
+
+intents_file = open('intents.json').read()
