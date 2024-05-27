@@ -39,7 +39,7 @@ for intent in intents['intents']:
         if intent['tag'] not in classes:
             classes.append(intent['tag'])
 
-# lemmaztize and lower each word and remove duplicates
+#Lemmaztize and lower each word and remove duplicates
 
 words = [lemmatizer.lemmatize(w.lower()) for w in words if w not in ignore_letters]
 words = sorted(list(set(words)))
@@ -58,3 +58,19 @@ print(len(words), "unique lemmatized words", words)
 
 pickle.dump(words, open('words.pkl', 'wb'))
 pickle.dump(classes, open('classes.pkl', 'wb'))
+
+#Create training data
+
+training = []
+
+#create empty array for output
+output_empty = [0] * len(classes)
+
+#training set, bag of words for every sentence
+for doc in documents:
+    #init bag of words
+    bag = []
+
+    #list of tokenized words for pattern
+    word_pattenrs = doc[0]
+
