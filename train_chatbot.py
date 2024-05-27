@@ -47,3 +47,12 @@ words = sorted(list(set(words)))
 #sort classes
 classes = sorted(list(set(classes)))
 
+#documents = combom btw. patterns and intents
+print(len(documents), "documents")
+
+#classes = intents
+print(len(classes), "classes", classes)
+
+#words = all words, vocabulary
+print(len(words), "unique lemmatized words", words)
+
