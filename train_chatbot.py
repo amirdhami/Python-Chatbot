@@ -56,3 +56,5 @@ print(len(classes), "classes", classes)
 #words = all words, vocabulary
 print(len(words), "unique lemmatized words", words)
 
+pickle.dump(words, open('words.pkl', 'wb'))
+pickle.dump(classes, open('classes.pkl', 'wb'))
