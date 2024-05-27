@@ -74,3 +74,18 @@ for doc in documents:
     #list of tokenized words for pattern
     word_pattenrs = doc[0]
 
+    #lemmatize each word
+    word_patterns = [lemmatizer.lemmatize(word.lower()) for word in word_patterns]
+
+    # create the bag of words array with 1, if word is found in current pattern
+    for word in words:
+
+        bag.append(1) if word in word_patterns else bag.append(0)
+
+    # output is a '0' for each tag and '1' for current tag (for each pattern)
+    output_row = list(output_empty)
+    output_row[classes.index(doc[1])] = 1
+    training.append([bag, output_row])
+
+
+
