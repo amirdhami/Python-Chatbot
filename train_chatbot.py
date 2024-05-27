@@ -72,7 +72,7 @@ for doc in documents:
     bag = []
 
     #list of tokenized words for pattern
-    word_pattenrs = doc[0]
+    word_patterns = doc[0]
 
     #lemmatize each word
     word_patterns = [lemmatizer.lemmatize(word.lower()) for word in word_patterns]
@@ -87,5 +87,13 @@ for doc in documents:
     output_row[classes.index(doc[1])] = 1
     training.append([bag, output_row])
 
+#shuffle features
+random.shuffle(training)
+training = np.array(training, dtype="object")
 
+#create training and testing lists
+# X - patterns, Y - intents
+train_x = list(training[:, 0])
+train_y = list(training[:, 1])
+print("Training data is created")
 
