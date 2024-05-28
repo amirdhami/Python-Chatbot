@@ -97,3 +97,7 @@ train_x = list(training[:, 0])
 train_y = list(training[:, 1])
 print("Training data is created")
 
+#Train Model
+
+#deep neural network model
+model = Sequential()
