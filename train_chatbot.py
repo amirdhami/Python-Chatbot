@@ -1,8 +1,9 @@
 import numpy as np
 from tensorflow import keras
 
-from tensorflow.python.keras.models import Sequential
-from tensorflow.python.keras.layers import Dense, Activation, Dropout
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Activation, Dropout
+
 from tensorflow.keras.optimizers import SGD
 import random
 
@@ -15,6 +16,9 @@ from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 import json
 import pickle
+
+import warnings
+warnings.filterwarnings("ignore")
 
 intents_file = open('intents.json').read()
 intents = json.loads(intents_file)
@@ -107,3 +111,8 @@ model.add(Dropout(0.5))
 model.add(Dense(64, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(len(train_y[0]), activation='softmax'))
+
+# Compiling model. SGD with Nesterov accelerated gradient gives good results for this model
+sgd = SGD(learning_rate=0.01, momentum=0.9, nesterov=True)
+model.compile(optimizer=sgd, loss='categorical_crossentropy', 
+              metrics=['accuracy'])
