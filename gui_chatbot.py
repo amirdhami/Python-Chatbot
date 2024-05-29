@@ -22,9 +22,8 @@ classes = pickle.load(open('classes.pkl','rb'))
 
 def clean_up_sentence(sentence):
     # tokenize the pattern - splitting words into array
-
-    #sentence_words = nltk.word_tokenize(sentence)
+    sentence_words = nltk.word_tokenize(sentence)
 
     # stemming every word - reducing to base form
-    #sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
-    return #sentence_words
+    sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
+    return sentence_words
