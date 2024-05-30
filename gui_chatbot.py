@@ -48,3 +48,20 @@ def bag_of_words(sentence, words, show_details=True):
                     print ("found in bag: %s" % word)
 
     return(np.array(bag))
+
+def predict_class(sentence):
+
+    # filter below  threshold predictions
+    p = bag_of_words(sentence, words,show_details=False)
+    res = model.predict(np.array([p]))[0]
+    ERROR_THRESHOLD = 0.25
+    results = [[i,r] for i,r in enumerate(res) if r>ERROR_THRESHOLD]
+
+    # sorting strength probability
+    results.sort(key=lambda x: x[1], reverse=True)
+    return_list = []
+
+    for r in results:
+        return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
+
+    return return_list
