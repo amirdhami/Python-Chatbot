@@ -11,8 +11,9 @@ model = load_model('chatbot_model.h5')
 import json
 import random
 
-import warnings
-warnings.filterwarnings("ignore")
+#Creating tkinter GUI
+import tkinter
+from tkinter import *
 
 #Load Pickle
 intents = json.loads(open('intents.json').read())
