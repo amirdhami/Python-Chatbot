@@ -27,3 +27,24 @@ def clean_up_sentence(sentence):
     # stemming every word - reducing to base form
     sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
     return sentence_words
+
+def bag_of_words(sentence, words, show_details=True):
+
+    # tokenizing patterns
+    sentence_words = clean_up_sentence(sentence)
+
+    # bag of words - vocabulary matrix
+    bag = [0]*len(words)  
+
+    for s in sentence_words:
+
+        for i,word in enumerate(words):
+
+            if word == s: 
+                # assign 1 if current word is in the vocabulary position
+                bag[i] = 1
+
+                if show_details:
+                    print ("found in bag: %s" % word)
+
+    return(np.array(bag))
