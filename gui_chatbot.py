@@ -93,3 +93,31 @@ def getResponse(ints, intents_json):
             result = random.choice(i['responses'])
             break
     return result
+
+def send():
+    msg = EntryBox.get("1.0",'end-1c').strip()
+
+    EntryBox.delete("0.0",END)
+
+
+    if msg != '':
+
+        ChatBox.config(state=NORMAL)
+
+        ChatBox.insert(END, "You: " + msg + '\n\n')
+
+        ChatBox.config(foreground="#446665", font=("Verdana", 12 )) 
+
+
+        ints = predict_class(msg)
+
+        res = getResponse(ints, intents)
+
+        
+
+        ChatBox.insert(END, "Bot: " + res + '\n\n')           
+
+
+        ChatBox.config(state=DISABLED)
+
+        ChatBox.yview(END)
