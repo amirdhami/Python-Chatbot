@@ -98,6 +98,12 @@ def send():
     """
     Handles the sending of a user message from the input box to the chatbot,
     and displays the chatbot's response in the chat box.
+
+     Args:
+        None
+
+    Returns:
+        None
     """
     # Get the user message from the EntryBox, stripping any extra spaces
     msg = EntryBox.get("1.0", 'end-1c').strip()
