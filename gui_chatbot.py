@@ -95,29 +95,37 @@ def getResponse(ints, intents_json):
     return result
 
 def send():
-    msg = EntryBox.get("1.0",'end-1c').strip()
+    """
+    Handles the sending of a user message from the input box to the chatbot,
+    and displays the chatbot's response in the chat box.
+    """
+    # Get the user message from the EntryBox, stripping any extra spaces
+    msg = EntryBox.get("1.0", 'end-1c').strip()
 
-    EntryBox.delete("0.0",END)
-
+    # Clear the EntryBox after getting the message
+    EntryBox.delete("0.0", END)
 
     if msg != '':
-
+        # Enable the ChatBox to insert the user's message
         ChatBox.config(state=NORMAL)
 
+        # Insert the user's message into the ChatBox
         ChatBox.insert(END, "You: " + msg + '\n\n')
 
-        ChatBox.config(foreground="#446665", font=("Verdana", 12 )) 
+        # Configure the appearance of the ChatBox
+        ChatBox.config(foreground="#446665", font=("Verdana", 12))
 
-
+        # Predict the class of the user's message
         ints = predict_class(msg)
 
+        # Get the response from the chatbot based on the predicted class
         res = getResponse(ints, intents)
 
-        
+        # Insert the chatbot's response into the ChatBox
+        ChatBox.insert(END, "Bot: " + res + '\n\n')
 
-        ChatBox.insert(END, "Bot: " + res + '\n\n')           
-
-
+        # Disable the ChatBox to prevent user input directly into it
         ChatBox.config(state=DISABLED)
 
+        # Scroll to the end of the ChatBox to show the latest message
         ChatBox.yview(END)
