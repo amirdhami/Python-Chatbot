@@ -141,3 +141,6 @@ root = Tk()
 root.title("Chatbot")
 root.geometry("400x500")
 root.resizable(width=FALSE, height=FALSE)
+
+#Create Chat window
+ChatBox = Text(root, bd=0, bg="white", height="8", width="50", font="Arial",)
