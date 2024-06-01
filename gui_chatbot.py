@@ -102,7 +102,7 @@ def send():
      Args:
         None
 
-    Returns:
+    Returns: 
         None
     """
     # Get the user message from the EntryBox, stripping any extra spaces
@@ -135,3 +135,9 @@ def send():
 
         # Scroll to the end of the ChatBox to show the latest message
         ChatBox.yview(END)
+
+root = Tk()
+
+root.title("Chatbot")
+root.geometry("400x500")
+root.resizable(width=FALSE, height=FALSE)
