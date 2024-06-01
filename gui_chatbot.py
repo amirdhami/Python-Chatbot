@@ -136,13 +136,20 @@ def send():
         # Scroll to the end of the ChatBox to show the latest message
         ChatBox.yview(END)
 
+# Initialize the main window for the chatbot GUI
 root = Tk()
 
+# Set the title of the main window
 root.title("Chatbot")
+
+# Set the size of the main window
 root.geometry("400x500")
+
+# Prevent the main window from being resizable
 root.resizable(width=FALSE, height=FALSE)
 
-#Create Chat window
-ChatBox = Text(root, bd=0, bg="white", height="8", width="50", font="Arial",)
+# Create the chat window (ChatBox) where messages will be displayed
+ChatBox = Text(root, bd=0, bg="white", height="8", width="50", font="Arial")
 
+# Disable the ChatBox to prevent user input directly into it
 ChatBox.config(state=DISABLED)
