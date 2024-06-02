@@ -153,3 +153,6 @@ ChatBox = Text(root, bd=0, bg="white", height="8", width="50", font="Arial")
 
 # Disable the ChatBox to prevent user input directly into it
 ChatBox.config(state=DISABLED)
+
+#Bind scrollbar to Chat window
+scrollbar = Scrollbar(root, command=ChatBox.yview, cursor="heart")
