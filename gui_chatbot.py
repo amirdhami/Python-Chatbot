@@ -156,3 +156,4 @@ ChatBox.config(state=DISABLED)
 
 #Bind scrollbar to Chat window
 scrollbar = Scrollbar(root, command=ChatBox.yview, cursor="heart")
+ChatBox['yscrollcommand'] = scrollbar.set
