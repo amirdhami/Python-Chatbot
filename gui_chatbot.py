@@ -160,7 +160,7 @@ ChatBox['yscrollcommand'] = scrollbar.set
 
 #Create Button to send message
 
-SendButton = Button(root, font=("Verdana",20,'bold'), text="Send", width="12", height=5,
-                    bd=1, bg="#f9a602", activebackground="#3c9d9b",fg='#000000',
+SendButton = Button(root, font=("Verdana",12,'bold'), text="Send", width="12", height=5,
+                    bd=0, bg="#f9a602", activebackground="#3c9d9b",fg='#000000',
                     command= send )
 
