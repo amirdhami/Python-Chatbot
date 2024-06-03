@@ -163,6 +163,5 @@ SendButton = Button(root, font=("Verdana",12,'bold'), text="Send", width="12", h
                     bd=0, bg="#f9a602", activebackground="#3c9d9b",fg='#000000',
                     command= send )
 
-
 #Create the box to enter message
 EntryBox = Text(root, bd=0, bg="white",width="29", height="5", font="Arial")
