@@ -167,4 +167,4 @@ SendButton = Button(root, font=("Verdana",12,'bold'), text="Send", width="12", h
 EntryBox = Text(root, bd=0, bg="white",width="29", height="5", font="Arial")
 
 #Place components on screen
-scrollbar.place(x=300,y=3, height=400)
+scrollbar.place(x=376,y=6, height=386)
