@@ -170,4 +170,5 @@ EntryBox = Text(root, bd=0, bg="white",width="29", height="5", font="Arial")
 scrollbar.place(x=376,y=6, height=386)
 ChatBox.place(x=6,y=6, height=386, width=370)
 
-EntryBox.place(x=159, y=400, height=50, width=265)
+EntryBox.place(x=128, y=401, height=90, width=265)
+
