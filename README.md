@@ -29,9 +29,28 @@ To get started with the Python Chatbot, follow these steps:
 
 To train the chatbot model, execute the following command:
 
- ```sh
+```sh
    python train_chatbot.py
+```
+This will process the intents.json file, train a neural network, and save the model along with necessary metadata files (words.pkl, classes.pkl, chatbot_model.h5, and chatbot_model.keras).
 
+### Running the Chabot
 
+To run the chatbot with a graphical user interface, execute:
 
+```sh
+   python gui_chatbot.py
+```
+This will launch a simple GUI where you can interact with the chatbot.
 
+## Dependencies
+
+Ensure you have the following dependencies installed.
+- TensorFlow
+- Keras
+- Numpy
+- Pickle
+- NLTK
+- Tkinter (for GUI)
+
+For any issues or contributions, please feel free to create a pull request or contact the repository owner. Thank you!
