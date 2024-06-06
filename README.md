@@ -19,8 +19,19 @@ To get started with the Python Chatbot, follow these steps:
    git clone https://github.com/yourusername/python-chatbot.git
 
 ## Usage
-Files:
+### Files:
 - intents.json: This file contains the training data for the chatbot. It includes different tags, patterns, and responses.
 - train_chatbot.py: This script is used to train the chatbot model.
 - gui_chatbot.py: This script is used to run the chatbot with a graphical user interface.
 - chatbot_model.h5, classes.pkl, words.pkl, chatbot_model.keras: These files are generated after training the chatbot and are used for the model's predictions.
+
+### Training the Chatbot:
+
+To train the chatbot model, execute the following command:
+
+ ```sh
+   python train_chatbot.py
+
+
+
+
