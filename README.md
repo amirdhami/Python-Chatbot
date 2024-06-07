@@ -17,6 +17,14 @@ To get started with the Python Chatbot, follow these steps:
 1. Clone the repository:
    ```sh
    git clone https://github.com/yourusername/python-chatbot.git
+   
+2. cd into chatbot directory:
+   ```sh
+   cd <project_directory>
+   
+3. Install requirements:
+   ```sh
+   pip install -r requirements.txt
 
 ## Usage
 ### Files:
