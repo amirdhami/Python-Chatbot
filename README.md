@@ -53,12 +53,13 @@ This will launch a simple GUI where you can interact with the chatbot.
 
 ## Dependencies
 
-Ensure you have the following dependencies installed.
+Ensure you have the following dependencies installed. 
 - TensorFlow
 - Keras
 - Numpy
 - Pickle
 - NLTK
 - Tkinter (for GUI)
+Make sure that when you import the various Keras modules, you import them from the same library. In this project, I've chosen to import all Keras dependencies from tensorflow.keras. You may run into errors otherwise.
 
 For any issues or contributions, please feel free to create a pull request or contact the repository owner. Thank you!
