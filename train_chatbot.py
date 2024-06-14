@@ -132,7 +132,7 @@ def train_and_save_model(model, train_x, train_y, epochs, batch_size, model_path
     """
     hist = model.fit(np.array(train_x), np.array(train_y), epochs=epochs, batch_size=batch_size, verbose=1)
     model.save(model_path, hist)
-    print("Model is created and saved to", model_path)
+    print("Model is saved to", model_path)
 
 def save_data(words, classes, words_path, classes_path):
     """
