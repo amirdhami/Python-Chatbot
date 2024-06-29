@@ -60,6 +60,6 @@ Ensure you have the following dependencies installed.
 - Pickle
 - NLTK
 - Tkinter (for GUI)
-Make sure that when you import the various Keras modules, you import them from the same library. In this project, I've imported all Keras dependencies from tensorflow.keras. You may run into errors otherwise.
+- Note: Make sure that when you import the various Keras modules, you import them from the same library. In this project, I've imported all Keras dependencies from tensorflow.keras. You may run into errors otherwise.
 
 For any issues or contributions, please feel free to create a pull request. Thank you!
